@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
 nav {
     display: flex;
     width: 100%;
@@ -76,7 +83,7 @@ header {
 main {
     width: 100%;
     max-width: 1600px;
-    height: 100vh;
+    flex-grow: 1;
     background-color: #FBF8F6;
     margin-left: auto;
     margin-right: auto;
@@ -84,6 +91,7 @@ main {
 }
 
 .main {
+    position: relative;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -107,14 +115,13 @@ main {
 }
 
 .homecontent {
-    width: 90%;
+    width: 100%;
     max-width: 495px;
     height: auto;
     position: absolute;
     top: 362px;
     left: 217px;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.8);
 }
 
 .homecontent p {
@@ -126,7 +133,6 @@ main {
 .homecontent h1 {
     gap: 10px;
     width: 100%;
-    max-width: 441px;
     font-weight: 400;
     font-size: 50px;
     height: auto;
@@ -140,14 +146,13 @@ main {
 }
 
 .btndiv {
-    width: 495px;
+    width: 90%;
     height: 66px;
     padding-top: 20px;
 }
 
 .btn {
     width: 146px;
-    height: 46px;
     border: none;
     border-radius: 100px;
     background-color: #B7D2CB;
@@ -199,8 +204,7 @@ main {
 
 .Ianddetail {
     height: auto;
-    width: 280px;
-    position: relative;
+    width: 86%;
     margin: 20px auto 0 auto;
     border: none;
     border-radius: 5px;
@@ -236,7 +240,7 @@ main {
 }
 
 .Image {
-    margin: 250px auto;
+    margin: 10% auto;
     width: 90%;
     max-width: 1340px;
     height: 520px;
@@ -259,10 +263,16 @@ main {
     left: 1%;
 }
 
+#empty {
+    width: 50%;
+    background-color: red;
+}
+
 .BG {
     position: absolute;
-    left: 50%;
-    width: 50%;
+    left: 70%;
+    top: 0;
+    width: 40%;
     height: 520px;
     background-color: rgba(0, 0, 0, 0.3);
     transform: translateX(-50%);
@@ -274,7 +284,7 @@ main {
     background-color: #FFFFFF;
     border: 1px solid #0000001A;
     border-radius: 20px;
-    padding: 40px 38px;
+    padding: 3% 2.5%;
     gap: 24px;
     width: 90%;
     max-width: 788px;
@@ -290,8 +300,11 @@ main {
 
 .Twodiv {
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
+}
+
+.widthdiv {
+    width: 100%;
 }
 
 textarea {
@@ -331,7 +344,7 @@ textarea {
     width: 100%;
 }
 
-input[type="email"] {
+#email {
     width: 100%;
 }
 
@@ -344,10 +357,6 @@ label {
     margin-bottom: 8px;
 }
 
-.widthdiv {
-    width: 99%;
-}
-
 .Iconsofsvg {
     display: flex;
     flex-direction: column;
@@ -358,11 +367,10 @@ label {
 .Ldiv {
     display: flex;
     margin: 80px auto 0 auto;
-    height: 158px;
     width: 100%;
     max-width: 1340px;
     justify-content: space-between;
-    padding: 0 5% 40px 5%;
+    padding: 3% 1% 40px 1%;
     border-top: 1px solid #ccc;
     flex-wrap: wrap;
 }
@@ -370,25 +378,25 @@ label {
 #footer {
     width: 100%;
     background-color: #B7D2CB;
+    margin-top: auto;
 }
 
-.footer {
+.footer-content {
     width: 100%;
-    max-width: 1340px;
+    max-width: 1600px;
     margin: auto;
-    padding: 80px 5%;
+    padding: 80px 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: #B7D2CB;
 }
 
 .footerlinks {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1600px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -436,17 +444,22 @@ label {
     max-width: 1340px;
     background-color: #B7D2CB;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     padding: 40px 5% 0 5%;
-    margin-top: 80px;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 
 @media (max-width: 1400px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
     .header {
         width: 90%;
         padding: 12px 5%;
@@ -454,6 +467,7 @@ label {
 
     main {
         width: 90%;
+        flex-grow: 1;
     }
 
     .main {
@@ -477,17 +491,55 @@ label {
         gap: 15px;
     }
 
+    .Image {
+        max-width: 900px;
+        height: 450px;
+        position: relative;
+    }
+
+    .BG {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-self: right;
+    }
+
     .product {
         width: 280px;
         min-height: 400px;
     }
+
+    .imgbox {
+        justify-content: flex-end;
+    }
+
+    .proimg {
+        width: 90% !important;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
     .header {
         flex-direction: column;
         height: auto;
         padding: 20px 5%;
+    }
+
+    .Image {
+        width: 800px;
     }
 
     .linkbox {
@@ -502,14 +554,21 @@ label {
     }
 
     .homecontent {
-        position: static;
         width: 100%;
         padding: 1rem 2rem;
+        font-size: medium;
         margin-top: 20px;
+        top: 10px;
+        left: 0;
+        background-color: #F7EFEC;
+    }
+
+    .homecontent h1 {
+        font-size: 30px;
     }
 
     .imgbox {
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     .allProducts {
@@ -526,9 +585,77 @@ label {
         width: 90%;
         padding: 20px;
     }
+
+    .Twodiv {
+        flex-wrap: wrap;
+    }
+
+    .proimg {
+        width: 200px !important;
+        height: 250px !important;
+    }
+
+    .Image {
+        max-width: 700px !important;
+        height: 350px !important;
+        position: relative;
+    }
+
+    .BG {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-self: right;
+    }
+}
+
+@media(max-width:932px) and (min-width: 750px) {
+    .Image {
+        max-width: 700px !important;
+        height: 250px !important;
+        position: relative;
+    }
+
+    .BG {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-self: right;
+    }
+
+    
+    #btnbox img{
+        width: 40px;
+    }
+    #btnbox div img{
+        width: 20px;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+    .product{
+        width: 250px !important;
+    }
+
+    .homecontent {
+        top: 340px;
+        width: 100%;
+        background-color: #F7EFEC;
+    }
 }
 
 @media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
     .header {
         padding: 20px 2%;
     }
@@ -537,6 +664,10 @@ label {
         width: 100%;
         gap: 10px;
         flex-wrap: wrap;
+    }
+
+    .Image {
+        width: 550px;
     }
 
     .links {
@@ -552,9 +683,27 @@ label {
         min-height: auto;
     }
 
+    .homecontent {
+        width: 88%;
+        height: auto;
+        margin: auto;
+        background-color: #F7EFEC;
+    }
+
     .homecontent h1 {
-        font-size: 32px;
+        font-size: 30px;
         max-width: 100%;
+    }
+
+    .homecontent button {
+        width: 73%;
+    }
+
+    #btnbox img{
+        width: 35px;
+    }
+    #btnbox div img{
+        width: 16px;
     }
 
     .btn,
@@ -567,13 +716,35 @@ label {
         width: 100%;
         padding: 12px;
     }
+
+    .Twodiv {
+        flex-wrap: wrap;
+    }
+
+    .proimg {
+        width: 210px !important;
+    }
 }
 
 @media (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
     nav {
         flex-direction: column;
         height: auto;
         padding: 10px 0;
+    }
+
+    .Image {
+        width: 550px;
     }
 
     .header {
@@ -594,14 +765,26 @@ label {
     }
 
     .homecontent {
+        width: 100%;
         position: static;
         padding: 1rem;
         margin: 20px 0;
         text-align: center;
+        background-color: #F7EFEC;
     }
 
     .homecontent h1 {
         font-size: 24px;
+    }
+
+    .homecontent p {
+        width: auto !important;
+        margin-bottom: 15px;
+    }
+
+    .homecontent button {
+        width: 25% !important;
+        margin-left: 10px;
     }
 
     .btn,
@@ -614,5 +797,45 @@ label {
     .allProducts {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .Twodiv {
+        flex-wrap: wrap;
+    }
+
+    .proimg {
+        width: 220px !important;
+    }
+
+    .Ldiv {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btndiv {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100% !important;
+    }
+
+    .Image {
+        max-width: 350px !important;
+        height: 150px !important;
+        position: relative;
+    }
+
+    #btnbox img{
+        width: 25px;
+    }
+    #btnbox div img{
+        width: 13px;
+    }
+    .BG {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-self: right;
     }
 }
