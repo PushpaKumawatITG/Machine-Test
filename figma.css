@@ -175,7 +175,6 @@ main {
 
 .allProducts {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     max-width: 1340px;
@@ -483,6 +482,7 @@ label {
     .products {
         width: 90%;
         padding: 50px 5% 80px 5%;
+        margin: auto;
     }
 
     .allProducts {
@@ -492,7 +492,7 @@ label {
     }
 
     .Image {
-        max-width: 900px;
+        max-width: 910px;
         height: 450px;
         position: relative;
     }
@@ -500,8 +500,7 @@ label {
     .BG {
         width: 50%;
         height: 100%;
-        display: flex;
-        align-self: right;
+        left: 75%;
     }
 
     .product {
@@ -513,8 +512,14 @@ label {
         justify-content: flex-end;
     }
 
+    .homecontent{
+        top: 290px;
+        left: 20px;
+    }
+
     .proimg {
-        width: 90% !important;
+        width: 100% !important;
+        height: 100%;
         display: flex;
         align-self: center;
         justify-content: center;
@@ -574,6 +579,7 @@ label {
     .allProducts {
         justify-content: center;
         gap: 10px;
+    flex-wrap: wrap;
     }
 
     .product {
@@ -637,6 +643,9 @@ label {
     .product{
         width: 250px !important;
     }
+    .allProducts{
+        margin-top: 200px !important;
+    }
 
     .homecontent {
         top: 340px;
@@ -676,6 +685,7 @@ label {
 
     .allProducts {
         gap: 10px;
+    flex-wrap: wrap;
     }
 
     .product {
@@ -797,6 +807,7 @@ label {
     .allProducts {
         flex-direction: column;
         gap: 20px;
+    flex-wrap: wrap;
     }
 
     .Twodiv {
